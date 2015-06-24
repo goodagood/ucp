@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/goodagood/ucp/issues"
   },
-  "homepage": "https://github.com/goodagood/ucp"
+  "homepage": "https://github.com/goodagood/ucp",
+  "dependencies": {
+    "express": "^4.13.0",
+    "htmlparser2": "^3.8.3",
+    "phantomjs": "^1.9.17"
+  }
 }
