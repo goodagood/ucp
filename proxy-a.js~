@@ -122,7 +122,7 @@ function get_request(href){
 
 function convert_links(href){
     //href = href || 'google.com';
-    href = href || 'yahoo.com';
+    href = href || 'baidu.com';
 
     // make sure it has an 'http' scheme at least.
     var reg = /^http/i;
