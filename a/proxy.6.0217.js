@@ -143,8 +143,39 @@ function convert_links(href){
 }
 
 
+
+var cheerio = require("cheerio");
+var convert = require("./conv-link.js");
+function dropCheck(href){
+    //href = href || 'google.com';
+    href = href || 'yahoo.com';
+
+    if(!this.oo) this.oo = {};
+
+    // make sure it has an 'http' scheme at least.
+    var reg = /^http/i;
+    if(! reg.test(href)) href = 'http://' + href;
+
+    request(href, function(err, response, body){
+        oo.err = err, oo.response = response, oo.body = body;
+        
+        if(err){ return p('err: ', err); }
+
+        p('response'); p(response);
+        //p('body'); p(body);
+
+        //p(body.slice(0, 300));
+        //p('typeof body: ', typeof body);
+        //var indx = body.search(/<\s*a\s+href="[^"]+"/);
+        //p('indx :', indx);
+        //p(body.slice(indx, 300));
+    });
+}
+
+
 if(require.main === module){
     //test_write();
     //make_qs();
     convert_links();
 }
+console.log( "ok start interact:");

@@ -1,0 +1,16 @@
+#!/usr/bin/expect
+# vim: set ft=expect :
+
+spawn node
+expect ">"
+send   "var u = require('underscore');\r"
+send   "var p = console.log;\r"
+expect ">"
+
+#send   ".load ./proxy.6.0217.js\r"
+#send   ".load ./con.js\r"
+send   ".load ./c-fetch.js\r"
+
+expect "ok start interact:"
+interact
+
